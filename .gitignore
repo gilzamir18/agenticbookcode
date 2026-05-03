@@ -1,0 +1,129 @@
+# =============================================================================
+# Segredos e configurações sensíveis — NUNCA versionar
+# =============================================================================
+.env
+.env.*
+!.env.example
+*.env
+secrets.json
+secrets.yaml
+secrets.yml
+config.local.*
+*_secret*
+*_private*
+
+# Padrões comuns de arquivos com chaves de API
+credentials.json
+service_account.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# =============================================================================
+# Ambientes virtuais Python
+# =============================================================================
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+.virtualenv/
+pythonenv*/
+.python-version
+
+# =============================================================================
+# Bytecode e caches Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# =============================================================================
+# Distribuição e empacotamento
+# =============================================================================
+dist/
+build/
+*.egg-info/
+*.egg
+wheels/
+.eggs/
+MANIFEST
+pip-wheel-metadata/
+share/python-wheels/
+
+# =============================================================================
+# Ferramentas de teste e cobertura
+# =============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+test-results/
+.tox/
+.nox/
+
+# =============================================================================
+# Type checkers e linters
+# =============================================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+.ruff_cache/
+
+# =============================================================================
+# Jupyter Notebooks
+# =============================================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =============================================================================
+# Dados locais e outputs gerados
+# =============================================================================
+*.log
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+logs/
+output/
+outputs/
+data/raw/
+data/interim/
+data/processed/
+
+# =============================================================================
+# IDEs e editores
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# Sistema operacional
+# =============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# =============================================================================
+# Dependências gerenciadas por ferramentas externas
+# =============================================================================
+node_modules/
+.npm/
