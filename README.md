@@ -28,6 +28,11 @@ agenticbookcode/
 
 ## Pré-requisitos
 
+- run:
+```sh
+pip install -r requeriments.txt
+```
+
 - Python 3.10 ou superior
 - Conta e chave de API na [Anthropic](https://console.anthropic.com/) (para os exemplos com Claude)
 - Dependências listadas em cada capítulo (veja os `README.md` internos)
