@@ -1,12 +1,9 @@
 InovaTech — Organização (Empresa)
-15 de maio de 2025 — Data
 São Paulo — Localização (Cidade)
 Mariana Silva — Pessoa
 Lisboa — Localização (Cidade)
 Portugal — Localização (País)
-R$ 50 milhões — Valor Monetário
 Global Ventures — Organização (Empresa/Fundo de Investimento)
-dezembro de 2026 — Data
 João Pedroso — Pessoa
 Rio de Janeiro — Localização (Cidade/Estado)
 
@@ -18,24 +15,20 @@ Flórida — Localização (Estado)
 
 NASA — Organização (Agência Governamental)
 Artemis II — Produto/Missão
-novembro de 2024 — Data
 Christina Koch — Pessoa
 Lua — Localização (Corpo Celestial)
 
 Petrobras — Organização (Empresa)
-2,5% — Porcentagem
 B3 — Organização (Bolsa de Valores)
 sexta-feira — Data (Dia da semana)
 
 Muro de Berlim — Localização/Monumento
-9 de novembro de 1989 — Data
 Guerra Fria — Evento
 Alemanha — Localização (País)
 
 Apple — Organização (Empresa)
 iPhone 16 — Produto
 Cupertino — Localização (Cidade)
-US$ 999 — Valor Monetário
 
 Oppenheimer — Obra de Arte/Produto
 Christopher Nolan — Pessoa
@@ -45,7 +38,6 @@ Los Angeles — Localização (Cidade)
 Instituto Butantan — Organização (Instituição de Pesquisa)
 Anvisa — Organização (Agência Reguladora)
 SUS — Organização (Sistema de Saúde)
-2025 — Data
 
 França — Localização (País)
 Emmanuel Macron — Pessoa
@@ -53,6 +45,4 @@ União Europeia — Organização (Bloco Político/Econômico)
 Bruxelas — Localização (Cidade)
 
 Floresta Amazônica — Localização
-22% — Porcentagem
-2023 — Data
 Inpe — Organização (Instituto de Pesquisa)

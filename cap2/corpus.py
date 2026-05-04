@@ -24,12 +24,33 @@ def load_dataset(corpus_path=None, entities_path=None):
 
     dataset = []
     for text, entities_block in zip(text_blocks, entity_blocks):
-        entities = [line.strip() for line in entities_block.split("\n") if line.strip()]
+        entities = [line.split("—")[0].strip() for line in entities_block.split("\n") if line.strip()]
         dataset.append({"text": text, "entities": entities})
     return dataset
 
 
-if __name__ == "__main__":
-    dataset = load_dataset()
+async def evaluate_model(model, dataset):
+    results = []
     for item in dataset:
-        print(item)
+        text = item["text"]
+        true_entities = set(item["entities"])
+        predicted_entities = set(await model.extract_entities(text))
+        precision = len(predicted_entities & true_entities) / len(predicted_entities) if predicted_entities else 0
+        recall = len(predicted_entities & true_entities) / len(true_entities) if true_entities else 0
+        f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) else 0
+        results.append({
+            "text": text,
+            "true_entities": true_entities,
+            "predicted_entities": predicted_entities,
+            "precision": precision,
+            "recall": recall,
+            "f1_score": f1_score
+        })
+
+    n = len(results)
+    averages = {
+        "avg_precision": sum(r["precision"] for r in results) / n if n else 0,
+        "avg_recall": sum(r["recall"] for r in results) / n if n else 0,
+        "avg_f1_score": sum(r["f1_score"] for r in results) / n if n else 0,
+    }
+    return results, averages
