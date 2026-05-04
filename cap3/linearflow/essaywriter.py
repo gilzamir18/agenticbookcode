@@ -4,9 +4,8 @@ from agenticblocks.blocks.llm.agent import LLMAgentBlock, AgentInput
 async def main():
     redator = LLMAgentBlock(
         name='redator',
-        description="colunista da seção de cinema do jornal.",
-        system_prompt="""Você deve escrever no máximo 30 linhas sobre filmes de
-        romance vencedores do Oscar.""",
+        description="colunista de cinema do jornal.",
+        system_prompt="""Você deve escrever no máximo 30 linhas sobre filmes de romance vencedores do Oscar.""",
         model='ollama/mistral-nemo:latest',
         max_iteration=0
     )
@@ -14,12 +13,7 @@ async def main():
     revisor = LLMAgentBlock(
         name="revisor",
         description="revisor de redações sobre filmes de romance",
-        system_prompt="""Revise a redação de entrada,
-                        não escreva mais de 30 linhas,
-                        verifique se redação de entrada menciona filmes
-                        famosos, como Titanic. Caso não cite,
-                        faça mudanças mencionando estes filmes.
-                        """,
+        system_prompt="""Revise a redação de entrada, não escreva mais de 30 linhas, verifique se redação de entrada menciona filmes famosos, como Titanic. Caso não cite, faça mudanças mencionando estes filmes.""",
         model="ollama/mistral-nemo:latest",
         max_iteration=0,
     )
