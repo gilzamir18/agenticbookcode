@@ -1,0 +1,1 @@
+{"status_code": 404, "detail": "Tool 'check_availability' not found.", "context": {"previous_tool_tracing_ids": [null, null], "next_dir": {}, "interim_state": {"name": "search", "arguments": {"query": "site:sportsbuzz.com"}}}, "data": {}}
