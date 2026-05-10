@@ -9,7 +9,6 @@ from utils import (
     validate_reply, build_chat_prompt,
 )
 
-
 @as_tool
 def print_response(resp: str) -> None:
     print("Agent *_-_*: ", resp)
@@ -60,12 +59,15 @@ async def main():
 
     plan_executor = PlanExecutorBlock(
         executor_agent=plan_executor_assistent,
+        tools=[mkdir, create_txt_file, append_content, remover_arquivo, remove_dir],
         validate_reply=validate_reply,
         max_reply_retries=2
     )
 
-    #Gera o plano
-    plan_str = await react_specialist.run(AgentInput(prompt="Gere o scaffolding de um app react simples."))
+    #A saida do planejador
+    plan_output = await react_specialist.run(AgentInput(prompt="Gere o scaffolding de um app react simples."))
+    #A saida em modo texto
+    plan_str = plan_output.response 
 
     #Transforma o plano em um objeto JSON
     plan = extract_json_plan(plan_str)
@@ -78,7 +80,7 @@ async def main():
             }}],
         }
     #Efetivamente executa o plano
-    output = await plan_executor.run(PlanExecutorInput(plan=plan, history=history_str))
+    output = await plan_executor.run(PlanExecutorInput(plan=plan, history=""))
     print("FINAL RESPONSE: \n\n", output.response)
 
 if __name__ == "__main__":
